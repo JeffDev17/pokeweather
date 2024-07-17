@@ -1,0 +1,31 @@
+# API key: bb60fe79dd6d01cf93722e71082e8701
+
+# 1st Fazer APIs funcionar
+
+# 2nd criar metodos para filtrar pokemons por temperatura;
+
+# 3rd Criar pagina HTML;
+
+# BONUS - Criar histórico de busca;
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+UPDATES:
+
+- API do weather nao está ativa ainda. Descobri por buscas que demora cerca de 2h p/ ativar.
+> Focar na API do pokemons
+
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+!!!!!!!!!!!!!!! COMANDOS UTEIS !!!!!!!!!!!!!!!!!!!
+
+KILL SERVER: 
+!!!!!  kill -9 $(lsof -i tcp:3000 -t)
+
+Rails g (controller/model etc)
+
+
+
+
