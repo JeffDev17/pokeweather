@@ -26,6 +26,22 @@ KILL SERVER:
 
 Rails g (controller/model etc)
 
+#MODELO SCRIPT CALL API WEATHER
+
+require 'rest-client'
+require 'json'
+# Replace 'YOUR_API_KEY' with your actual API key
+api_key = 'YOUR_API_KEY'
+city = 'New York'  # Replace with the desired city
+# Make an API request to retrieve weather data
+response = RestClient.get("https://api.openweathermap.org/data/2.5/weather?q=#{city}&appid=#{api_key}")
+weather_data = JSON.parse(response)
+# Extract relevant information
+temperature = weather_data['main']['temp']
+description = weather_data['weather'][0]['description']
+puts "Current weather in #{city}:"
+puts "Temperature: #{temperature} Kelvin"
+puts "Description: #{description}"
 
 
 
