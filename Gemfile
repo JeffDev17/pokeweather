@@ -7,7 +7,7 @@ ruby "3.2.1"
 gem "rails", "~> 7.0.8"
 
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
-gem "sprockets-rails"
+gem 'sprockets-rails', '~> 3.0', '>= 3.0.4'
 
 # Use postgresql as the database for Active Record
 gem "pg", "~> 1.1"
@@ -29,7 +29,7 @@ gem "jbuilder"
 
 gem 'rest-client'
 
-gem 'json'
+#gem 'json'
 
 #gem 'httparty', '~> 0.13.7'
 
@@ -61,7 +61,7 @@ end
 
 group :development do
   # Use console on exceptions pages [https://github.com/rails/web-console]
-  gem 'web-console'
+  gem 'web-console', '~> 4.2'
 
   # Add speed badges [https://github.com/MiniProfiler/rack-mini-profiler]
   # gem "rack-mini-profiler"
