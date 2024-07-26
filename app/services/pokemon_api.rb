@@ -3,25 +3,25 @@
 
 class PokemonApi
 
-    def run
-        response = RestClient.get("https://pokeapi.co/api/v2/pokemon/charizard")
+    def run(type)
+        
+        response = RestClient.get("https://pokeapi.co/api/v2/type/#{type}")
         pokemon_data = JSON.parse(response)
 
-        #type = pokemon_data['types'][0]['type']['name']
-        #type2 = pokemon_data['types'][1]['type']['name']
-        types = []
+        names_list = []
+        pokemon_selecionado = []
 
-
-        pokemon_data['types'].each do |type|
-            puts type['type']['name']
-            types << type['type']['name']
+        pokemon_data['pokemon'].each do |names|
+            names_list << names['pokemon']['name']
         end
 
-        name = pokemon_data['species']['name']
-        puts "The pokémon is: #{name}"
-        puts types
+        1.times do 
+        pokemon_selecionado << names_list[rand(names_list.length)]
+        end
 
-        types
+       
+        #puts "O pokemon selecionado é: "
+        pokemon_selecionado
     end
 
 end
