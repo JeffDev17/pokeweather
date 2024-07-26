@@ -15,11 +15,17 @@ class PokemonApi
             names_list << names['pokemon']['name']
         end
 
-        1.times do 
-        pokemon_selecionado << names_list[rand(names_list.length)]
-        end
+        1.times do
+            new_pokemon = names_list[rand(names_list.length)]
+          
+            while pokemon_selecionado.last == new_pokemon
+              new_pokemon = names_list[rand(names_list.length)]
+            end
+          
+            pokemon_selecionado << new_pokemon
+          end
 
-       
+
         #puts "O pokemon selecionado é: "
         pokemon_selecionado
     end

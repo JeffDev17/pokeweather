@@ -6,7 +6,8 @@ class WeatherApi
 
         api_key = 'bb60fe79dd6d01cf93722e71082e8701'
         
-        response = RestClient.get("https://api.openweathermap.org/data/2.5/weather?q=#{city}&units=metric&appid=#{api_key}")
+        response = RestClient.get("https://api.openweathermap.org/data/2.5/weather?q=#{city}&lang=pt_br&units=metric&appid=#{api_key}")
+        
         weather_data = JSON.parse(response)
         weather_wrap = []
 
