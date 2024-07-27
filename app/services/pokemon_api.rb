@@ -13,9 +13,9 @@ class PokemonApi
 
         pokemon_data['pokemon'].each do |names|
             names_list << names['pokemon']['name']
-        end
+            end
 
-        1.times do
+        
             new_pokemon = names_list[rand(names_list.length)]
           
             while pokemon_selecionado.last == new_pokemon
@@ -23,11 +23,11 @@ class PokemonApi
             end
           
             pokemon_selecionado << new_pokemon
-          end
+          
 
 
-        #puts "O pokemon selecionado é: "
-        pokemon_selecionado
+        
+            pokemon_selecionado
     end
 
 end

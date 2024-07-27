@@ -29,6 +29,11 @@ gem "jbuilder"
 
 gem 'rest-client'
 
+gem "cssbundling-rails"
+
+gem 'rails_admin'
+
+
 #gem 'json'
 
 #gem 'httparty', '~> 0.13.7'
@@ -76,3 +81,4 @@ group :test do
   gem "selenium-webdriver"
 
 end
+

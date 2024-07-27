@@ -15,9 +15,6 @@ class WeatherApi
         description = weather_data['weather'][0]['description']
         chuva = weather_data['weather'][0]['main']
         rain = chuva.to_s
-        #puts "Current weather in #{city}:"
-        #puts "Temperature: #{temperature} graus"
-        #puts "Description: #{description}"
         
         return rain if rain.eql?('Rain')
         
