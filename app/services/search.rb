@@ -7,16 +7,10 @@ class Search
         city = data[2]
         
         type = check_type(temperature, rain)
-        
-
-        #type = check_type(temperature)
+  
         pokemon_selecionado = consult_pokemon(type)
 
-        #mensagem =
         mostra_resultado(city, temperature, rain, pokemon_selecionado)
-        #string = mensagem.to_s
-
-        #puts string
 
     end
 
@@ -33,10 +27,6 @@ class Search
       end
 
       puts "O pokemon selecionado para esta região foi: #{pokemon_selecionado}"
-
-      #mensagem = "#{linha1}#{linha2}#{linha3}"
-
-      #mensagem
 
     end
 
