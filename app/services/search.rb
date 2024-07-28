@@ -9,8 +9,12 @@ class Search
         type = check_type(temperature, rain)
   
         pokemon_selecionado = consult_pokemon(type)
+        pokemon_selecionado
 
         mostra_resultado(city, temperature, rain, pokemon_selecionado)
+
+        register(city, temperature, pokemon_selecionado)
+        
 
     end
 
@@ -64,6 +68,11 @@ class Search
         WeatherApi.new.run
         
     end
+
+    def register(city, temperature, pokemon_selecionado)
+      SearchHistory.new(city: "#{city}", temperature: "#{temperature}", pokemon: "#{pokemon_selecionado}").save
+    end
+
 
 end
 
