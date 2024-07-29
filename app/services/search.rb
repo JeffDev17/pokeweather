@@ -6,12 +6,12 @@ class Search
         rain = data[1]
         city = data[2]
         
-        type = check_type(temperature, rain)
+        type = check_type(temperature, rain).downcase
   
         pokemon_selecionado = consult_pokemon(type)
         pokemon_selecionado
 
-        mostra_resultado(city, temperature, rain, pokemon_selecionado)
+        mostra_resultado(city, temperature, rain, pokemon_selecionado, type)
 
         register(city, temperature, pokemon_selecionado)
         
@@ -20,7 +20,7 @@ class Search
 
     private  
 
-    def mostra_resultado(city, temperature, rain, pokemon_selecionado)
+    def mostra_resultado(city, temperature, rain, pokemon_selecionado, type)
       
       puts "A temperatura atual na cidade de #{city} é #{temperature}°C"
       
@@ -30,31 +30,31 @@ class Search
         puts "Não está chovendo."
       end
 
-      puts "O pokemon selecionado para esta região foi: #{pokemon_selecionado}"
+      puts "O pokemon selecionado para esta região foi: #{pokemon_selecionado} e o tipo é: #{type.capitalize}"
 
     end
 
 
     def check_type(temperature, rain)
-        return 'electric' if rain.eql?('Rain')
+        return 'Electric' if rain.eql?('Rain')
 
         case temperature
         when ..5
-          'ice'
+          'Ice'
         when 5...10
-          'water'
+          'Water'
         when 12...15
-          'grass'
+          'Grass'
         when 15...21
-          'ground'
+          'Ground'
         when 23...27
-          'bug'
+          'Bug'
         when 27..33
-          'rock'
+          'Rock'
         when 33...
-          'fire'
+          'Fire'
         else
-          'normal'
+          'Normal'
         end
         
     end
