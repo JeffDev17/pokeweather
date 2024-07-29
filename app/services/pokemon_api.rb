@@ -30,7 +30,7 @@ class PokemonApi
             
             #puts today_pokemons
 
-            pokemon_selecionado.upcase
+            pokemon_selecionado.capitalize
 
     end
 
