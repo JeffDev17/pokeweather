@@ -5,3 +5,15 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
+
+pokemon_types = [
+    "Normal", "Fire", "Water", "Electric", "Grass", "Ice", 
+    "Fighting", "Poison", "Ground", "Flying", "Psychic", 
+    "Bug", "Rock", "Ghost", "Dragon", "Dark", "Steel", 
+    "Fairy"
+  ]
+  
+  # Populate the PokemonType table
+  pokemon_types.each do |type_name|
+    Type.find_or_create_by(name: type_name)
+  end
