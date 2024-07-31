@@ -9,11 +9,16 @@ class Search
         type = check_type(temperature, rain).downcase
   
         pokemon_selecionado = consult_pokemon(type)
-        pokemon_selecionado
+        pokemon_selecionado.capitalize
+
 
         mostra_resultado(city, temperature, rain, pokemon_selecionado, type)
 
-        register(city, temperature, pokemon_selecionado)
+        register(city, temperature, pokemon_selecionado.capitalize)
+        object = build_pokemon_object(pokemon_selecionado)
+
+        pkmn = register_dex(object.first)
+        create_pokemon_type(pkmn, object.last)
         
 
     end
@@ -71,6 +76,37 @@ class Search
 
     def register(city, temperature, pokemon_selecionado)
       SearchHistory.new(city: "#{city}", temperature: "#{temperature}", pokemon: "#{pokemon_selecionado}").save
+      
+    end
+
+    def register_dex(object)
+      puts object
+      Pokemon.create_with(object).find_or_create_by(name: object[:name])
+    end
+
+    def build_pokemon_object(pokemon_selecionado)
+      pokemon_data = PokemonApi.new.register(pokemon_selecionado)
+     
+      pokemon_object = {
+        name: pokemon_data['name'].capitalize,
+        dex: pokemon_data['id'],
+        height: pokemon_data['height'],
+        weight: pokemon_data['weight']
+      }
+
+      [pokemon_object, pokemon_data['types']]
+    end
+
+    def create_pokemon_type(pokemon, types)
+      types.each do |type|
+      type_seed = Type.find_by(name: type['type']['name'].capitalize)
+
+      PokemonType.create!(pokemon: pokemon, type: type_seed)
+
+
+      end
+
+
     end
 
 

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2024_07_30_124847) do
+ActiveRecord::Schema[7.0].define(version: 2024_07_30_213949) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -27,10 +27,9 @@ ActiveRecord::Schema[7.0].define(version: 2024_07_30_124847) do
     t.string "name"
     t.integer "height"
     t.integer "weight"
-    t.bigint "type_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["type_id"], name: "index_pokemons_on_type_id"
+    t.integer "dex"
   end
 
   create_table "search_histories", force: :cascade do |t|
@@ -49,5 +48,4 @@ ActiveRecord::Schema[7.0].define(version: 2024_07_30_124847) do
 
   add_foreign_key "pokemon_types", "pokemons"
   add_foreign_key "pokemon_types", "types"
-  add_foreign_key "pokemons", "types"
 end

@@ -30,8 +30,19 @@ class PokemonApi
             
             #puts today_pokemons
 
-            pokemon_selecionado.capitalize
+            pokemon_selecionado
 
     end
+
+      #receber valor pokemon_selecionado para rodar
+    def register(pokemon)
+      response = RestClient.get("https://pokeapi.co/api/v2/pokemon/#{pokemon}/")
+        pokemon_data = JSON.parse(response)
+      
+      pokemon_data
+
+    end
+
+
 
 end
