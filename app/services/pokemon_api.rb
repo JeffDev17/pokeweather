@@ -16,25 +16,19 @@ class PokemonApi
             end
             
             today_pokemons = SearchHistory.where(created_at: Time.zone.now.beginning_of_day..Time.zone.now.end_of_day).pluck(:pokemon)
-            remaining_pokemons = names_list - today_pokemons
             
-            new_pokemon = remaining_pokemons[rand(remaining_pokemons.length)]
-          
-            while pokemon_selecionado.last == new_pokemon
-              new_pokemon = remaining_pokemons[rand(remaining_pokemons.length)]
+            random_pokemon = names_list.sample
+
+            if today_pokemons.include?(random_pokemon)
+              random_pokemon = names_list.sample
             end
 
-            str = new_pokemon.to_s
-
-            pokemon_selecionado = str
+            pokemon_selecionado = random_pokemon.to_s
             
-            #puts today_pokemons
-
             pokemon_selecionado
 
     end
 
-      #receber valor pokemon_selecionado para rodar
     def register(pokemon)
       response = RestClient.get("https://pokeapi.co/api/v2/pokemon/#{pokemon}/")
         pokemon_data = JSON.parse(response)
@@ -42,7 +36,12 @@ class PokemonApi
       pokemon_data
 
     end
-
-
-
 end
+
+
+
+            #remaining_pokemons = names_list - today_pokemons
+            #random_pokemon = names_list[rand(names_list.length)]
+            #while pokemon_selecionado.last == new_pokemon
+            #  new_pokemon = remaining_pokemons[rand(remaining_pokemons.length)]
+            #end

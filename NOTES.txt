@@ -45,3 +45,18 @@ puts "Description: #{description}"
 
 
 
+str = '["sizzlipede"]'
+
+cleaned_str = str.gsub(/[\[\]"']/, '')
+
+puts cleaned_str  # Output will be sizzlipede
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+FEATURES:
+
+* Search com API de clima que seleciona pokemon da lista do PokemonAPI
+* Search registra histórico de busca;
+* Search garante pokemons não repetidos dentro da mesma data;
+* Tabela para registro de caracteristicas dos pokemons buscados;
+
