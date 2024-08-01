@@ -49,7 +49,7 @@ class Search
         return 'Electric' if rain.eql?('Rain')
 
         case temperature
-        when ..5
+        when -Float::INFINITY..5
           'Ice'
         when 5...10
           'Water'
@@ -61,13 +61,12 @@ class Search
           'Bug'
         when 27..33
           'Rock'
-        when 33...
+        when 33..Float::INFINITY
           'Fire'
         else
           'Normal'
         end
-        
-    end
+      end
 
     def consult_pokemon(type)
         PokemonApi.new.run(type)
