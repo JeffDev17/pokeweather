@@ -11,14 +11,19 @@ class Search
         pokemon_selecionado = consult_pokemon(type)
         pokemon_selecionado.capitalize
 
-
+        #Coloca o puts no console
         mostra_resultado(city, temperature, rain, pokemon_selecionado, type)
 
+        #regitra no SearchHistory
         register(city, temperature, pokemon_selecionado.capitalize)
+        
+        #Monta o objeto pokemon (nome, altura, peso, dexNo, tipo)
         object = build_pokemon_object(pokemon_selecionado)
 
-        pkmn = register_dex(object.first)
-        create_pokemon_type(pkmn, object.last)
+        
+        pokemon = register_dex(object.first)
+
+        create_pokemon_type(pokemon, object.last)
         
 
     end
@@ -80,11 +85,16 @@ class Search
     end
 
     def register_dex(object)
-      puts object
+      #Vai buscar(find) o (object: name) 
+      #na tabela de Pokemon
+      #e se não encontrar na lista vai criar 
+      #um pokemon usando os dados do Hash (object) 
       Pokemon.create_with(object).find_or_create_by(name: object[:name])
     end
 
     def build_pokemon_object(pokemon_selecionado)
+      #Roda a API
+      #Monta o pokemon retornando os dados num hash
       pokemon_data = PokemonApi.new.register(pokemon_selecionado)
      
       pokemon_object = {
