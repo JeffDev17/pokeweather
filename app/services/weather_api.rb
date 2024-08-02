@@ -1,8 +1,8 @@
 class WeatherApi
 
-    def run    
-        puts "Qual cidade você gostaria de pesquisar?"
-        city = gets.chomp.to_s.capitalize
+    def run(city)   
+        #puts "Qual cidade você gostaria de pesquisar?"
+        #city = gets.chomp.to_s.capitalize
 
         api_key = 'bb60fe79dd6d01cf93722e71082e8701'
         

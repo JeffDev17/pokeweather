@@ -1,0 +1,39 @@
+// Navbar Styles
+.navbar {
+    background-color: #343a40; // Dark background color
+  }
+  
+  .navbar-brand {
+    color: #ffffff; // White text color for the brand name
+    &:hover {
+      color: #f8f9fa; // Lighter color on hover
+    }
+  }
+  
+  .navbar-nav .nav-link {
+    color: #ffffff; // White text color for nav links
+    &:hover {
+      color: #f8f9fa; // Lighter color on hover
+    }
+  }
+  
+  .navbar-text {
+    color: #ffffff; // White text color for navbar text
+  }
+  
+  .navbar-toggler-icon {
+    background-image: url('data:image/svg+xml;charset=utf8,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"%3E%3Cpath d="M4 6h16M4 12h16m-7 6h7"/%3E%3C/svg%3E');
+  }
+  
+  .navbar-toggler {
+    border-color: #ffffff; // White border for the toggler
+    &:focus {
+      box-shadow: none; // Remove default focus box-shadow
+    }
+  }
+  
+  // Optional: Custom styles for navbar-collapse if needed
+  .navbar-collapse {
+    background-color: #343a40; // Dark background for collapsed menu
+  }
+  
