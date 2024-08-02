@@ -1,4 +1,5 @@
-<form class="row domain-search bg-pblue">
+<!-- app/views/weather/index.html.erb -->
+<%= form_with url: weather_search_path, method: :get, local: true, class: "row domain-search bg-pblue" do %>
   <div class="container">
     <div class="row">
       <div class="col-md-3">
@@ -7,13 +8,13 @@
       </div>
       <div class="col-md-9">
         <div class="input-group">
-          <input type="search" class="form-control">
+          <%= text_field_tag :city, params[:city], class: "form-control", placeholder: "Enter city" %>
           <span class="input-group-addon">
-            <input type="submit" value="Search" class="btn btn-primary">
+            <%= submit_tag "Search", class: "btn btn-primary" %>
           </span>
         </div>
         <p>.com <strong>$8.95</strong>.net <strong>$7.95</strong>.org <strong>$9.95</strong>.club <strong>$0.99</strong></p>
       </div>
     </div>
   </div>
-</form>
+<% end %>
