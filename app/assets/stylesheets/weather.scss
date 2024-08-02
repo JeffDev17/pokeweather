@@ -1,0 +1,82 @@
+body {
+  background-color: #35abdf;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.domain-search {
+  margin: 0 auto; /* Center the form horizontally */
+  padding: 40px 0; /* Adjust padding as needed */
+  background-color: #35abdf; /* Apply background color */
+  color: #fff; /* Set text color for visibility */
+  max-width: 960px; /* Limit maximum width */
+}
+
+.domain-search .form-title {
+  margin-top: 0;
+  margin-bottom: 10px; /* Adjust margin as needed */
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-size: 2rem; /* Adjust font size as needed */
+}
+
+.domain-search p {
+  color: #B0E7FF;
+  margin: 0;
+  font-size: 1rem; /* Adjust font size as needed */
+}
+
+.domain-search .input-group {
+  -webkit-box-shadow: 0px 4px 18px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 4px 18px rgba(0, 0, 0, 0.1);
+}
+
+.domain-search .input-group-addon {
+  border: none;
+}
+
+.domain-search .form-title strong {
+  display: block;
+}
+
+.domain-search .form-control {
+  height: 60px;
+  border-radius: 0;
+  border: none;
+  padding: 0 15px;
+}
+
+.domain-search .form-control:focus {
+  box-shadow: none;
+}
+
+.input-group .input-group-addon [type="submit"],
+.input-group .input-group-addon button {
+  border: none;
+  border-radius: 0;
+}
+
+.domain-search .btn {
+  padding: 0 54px;
+  line-height: 60px;
+  background: #ff6726;
+  color: #fff;
+}
+
+.domain-search .btn:hover {
+  background-color: #286090;
+}
+
+.domain-search .input-group + p {
+  color: #fff;
+  font-size: 15px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  margin-top: 15px;
+  margin-bottom: 0;
+}
+
+.domain-search .input-group + p strong {
+  margin-right: 40px;
+}

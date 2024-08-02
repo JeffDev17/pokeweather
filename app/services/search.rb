@@ -1,7 +1,7 @@
 class Search 
 
-    def run
-        data = consult_weather
+    def run(city)
+        data = consult_weather(city)
         temperature = data[0]
         rain = data[1]
         city = data[2]
@@ -49,32 +49,32 @@ class Search
         return 'Electric' if rain.eql?('Rain')
 
         case temperature
-        when -Float::INFINITY..5
-          'Ice'
-        when 5...10
-          'Water'
-        when 12...15
-          'Grass'
-        when 15...21
-          'Ground'
-        when 23...27
-          'Bug'
-        when 27..33
-          'Rock'
-        when 33..Float::INFINITY
-          'Fire'
-        else
-          'Normal'
-        end
-      end
+  when -Float::INFINITY..5
+    'Ice'
+  when 5...10
+    'Water'
+  when 12...15
+    'Grass'
+  when 15...21
+    'Ground'
+  when 23...27
+    'Bug'
+  when 27..33
+    'Rock'
+  when 33..Float::INFINITY
+    'Fire'
+  else
+    'Normal'
+  end
+end
 
     def consult_pokemon(type)
         PokemonApi.new.run(type)
 
     end
 
-    def consult_weather
-        WeatherApi.new.run
+    def consult_weather(city)
+        WeatherApi.new.run(city)
         
     end
 
