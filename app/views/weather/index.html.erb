@@ -1,4 +1,19 @@
 <!-- app/views/weather/index.html.erb -->
+
+<% if flash[:notice].present? %>
+  <div class="alert alert-success alert-dismissible fade show" role="alert">
+    <%= flash[:notice] %>
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+  </div>
+<% end %>
+
+<% if flash[:alert].present? %>
+  <div class="alert alert-danger alert-dismissible fade show" role="alert">
+    <%= flash[:alert] %>
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+  </div>
+<% end %>
+
 <%= form_with url: weather_search_path, method: :get, local: true, class: "row domain-search bg-pblue" do %>
   <div class="container">
     <div class="row">
@@ -13,7 +28,15 @@
             <%= submit_tag "Search", class: "btn btn-primary" %>
           </span>
         </div>
-        <p>.com <strong>$8.95</strong>.net <strong>$7.95</strong>.org <strong>$9.95</strong>.club <strong>$0.99</strong></p>
+        <% if @random_search %>
+          <div class="random-search mt-3">
+            <h3>Previous searches:</h3>
+            <p>City: <%= @random_search.city %></p>
+            <p>Pokemon: <%= @random_search.pokemon %></p>
+            <p>Temperature: <%= @random_search.temperature %>°C</p>
+            <p>Date: <%= @random_search.created_at.strftime("%B %d, %Y %H:%M") %></p>
+          </div>
+        <% end %>
       </div>
     </div>
   </div>
