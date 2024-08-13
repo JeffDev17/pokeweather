@@ -24,7 +24,16 @@ class Search
         pokemon = register_dex(object.first)
 
         create_pokemon_type(pokemon, object.last)
+
+        #retornando valor p dar display no notice
+        weather_data = {
+          pokemon: pokemon_selecionado.capitalize,
+          temperature: temperature,
+          rain: rain,
+          city: city
+        }
         
+        weather_data
 
     end
 
@@ -49,24 +58,24 @@ class Search
         return 'Electric' if rain.eql?('Rain')
 
         case temperature
-  when -Float::INFINITY..5
-    'Ice'
-  when 5...10
-    'Water'
-  when 12...15
-    'Grass'
-  when 15...21
-    'Ground'
-  when 23...27
-    'Bug'
-  when 27..33
-    'Rock'
-  when 33..Float::INFINITY
-    'Fire'
-  else
-    'Normal'
-  end
-end
+            when -Float::INFINITY..5
+              'Ice'
+            when 5...10
+              'Water'
+            when 12...15
+              'Grass'
+            when 15...21
+              'Ground'
+            when 23...27
+              'Bug'
+            when 27..33
+              'Rock'
+            when 33..Float::INFINITY
+              'Fire'
+            else
+              'Normal'
+          end
+    end
 
     def consult_pokemon(type)
         PokemonApi.new.run(type)
