@@ -6,12 +6,17 @@ class WeatherController < ApplicationController
   def search
     city = params[:city].capitalize
     weather_data = Search.new.run(city)
-
-    if weather_data.present?
-      flash[:notice] = "City: #{weather_data[:city]}, Pokémon: #{weather_data[:pokemon]}, Temperature: #{weather_data[:temperature]}°C, Rain: #{weather_data[:rain] ? 'Yes' : 'No'}"
-    else
-      flash[:alert] = "City not found. Please try again."
-    end
-
+    
+    display_results(weather_data)
   end
+
+  private
+
+  def display_results(weather_data)
+    render turbo_stream:
+      turbo_stream.replace("results", 
+      partial: "shared/results", 
+      locals: { weather_data: weather_data })
+  end
+  
 end

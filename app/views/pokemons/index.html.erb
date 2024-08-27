@@ -1,22 +1,24 @@
-<h1>Pokedex</h1>
+<h1 class="pokedex-title">POKEDEX</h1>
 
-<table class="table table-striped">
-  <thead>
-    <tr>
-      <th>Dex Number</th>
-      <th>Name</th>
-      <th>Height</th>
-      <th>Weight</th>
-    </tr>
-  </thead>
-  <tbody>
-    <% @pokemons.each do |pokemon| %>
+<div class="table-container">
+  <table class="table table-striped">
+    <thead>
       <tr>
-        <td><%= pokemon.dex %></td>
-        <td><%= pokemon.name %></td>
-        <td><%= pokemon.height %></td>
-        <td><%= pokemon.weight %></td>
+        <th><%= link_to "Dex No", pokemons_path(sort: "dex", direction: sort_direction("dex")) %></th>
+        <th><%= link_to "Name", pokemons_path(sort: "name", direction: sort_direction("name")) %></th>
+        <th><%= link_to "Height", pokemons_path(sort: "height", direction: sort_direction("height")) %></th>
+        <th><%= link_to "Weight", pokemons_path(sort: "weight", direction: sort_direction("weight")) %></th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
+    </thead>
+    <tbody>
+      <% @pokemons.each do |pokemon| %>
+        <tr>
+          <td><%= pokemon.dex %></td>
+          <td><%= pokemon.name %></td>
+          <td><%= pokemon.height %></td>
+          <td><%= pokemon.weight %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
