@@ -1,22 +1,24 @@
-<h1>Search History</h1>
+<h1 class="history-title">Search History</h1>
 
-<table class="table table-striped">
-  <thead>
-    <tr>
-      <th>ID</th>
-      <th>City</th>
-      <th>Temperature</th>
-      <th>Date</th>
-    </tr>
-  </thead>
-  <tbody>
-    <% @search_histories.each do |history| %>
+<div class="table-container">
+  <table class="table table-striped">
+    <thead>
       <tr>
-        <td><%= history.id %></td>
-        <td><%= history.city %></td>
-        <td><%= history.temperature %></td>
-        <td><%= history.created_at.strftime("%Y-%m-%d %H:%M") %></td>
+        <th><%= link_to "ID", history_path(sort: 'id', direction: sort_direction('id')) %></th>
+        <th><%= link_to "City", history_path(sort: 'city', direction: sort_direction('city')) %></th>
+        <th><%= link_to "Temperature", history_path(sort: 'temperature', direction: sort_direction('temperature')) %></th>
+        <th><%= link_to "Date", history_path(sort: 'created_at', direction: sort_direction('created_at')) %></th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
+    </thead>
+    <tbody>
+      <% @search_histories.each do |history| %>
+        <tr>
+          <td><%= history.id %></td>
+          <td><%= history.city %></td>
+          <td><%= history.temperature %></td>
+          <td><%= history.created_at.strftime("%Y-%m-%d %H:%M") %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>

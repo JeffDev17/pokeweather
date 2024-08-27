@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   get 'history/index'
   get 'pokemons/index'
+  resources :pokemons, only: [:index]
+  resources :search_histories, only: [:index]
 
   get 'weather', to: 'weather#index', as: 'weather'
   get 'weather/search', to: 'weather#search', as: 'weather_search'
