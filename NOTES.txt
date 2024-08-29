@@ -60,3 +60,16 @@ FEATURES:
 * Search garante pokemons não repetidos dentro da mesma data;
 * Tabela para registro de caracteristicas dos pokemons buscados;
 
+####################
+
+Devise
+
+Bundle add Devise
+Rails g devise:install
+
+rails g devise User (sem mais infos para usar o padrao) (criar modelo)
+
+db:migrate
+
+
+

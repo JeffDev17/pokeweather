@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users
   get 'history/index'
   get 'pokemons/index'
   resources :pokemons, only: [:index]
