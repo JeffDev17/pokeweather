@@ -66,5 +66,20 @@ Rails.application.configure do
   # config.action_view.annotate_rendered_view_with_filenames = true
 
   # Uncomment if you wish to allow Action Cable access from any origin.
-  # config.action_cable.disable_request_forgery_protection = true
+  # config.action_cable.disable_request_forgery_protection = true 
+  config.action_mailer.delivery_method = :sendmail
+  config.action_mailer.perform_deliveries = true
+  config.action_mailer.raise_delivery_errors = true
+  config.action_mailer.default_options = { from: 'jeff17.rb@gmail.com' }
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+  address:              'smtp.gmail.com',
+  port:                 587,
+  domain:               'mail.google.com',
+  user_name:            "jeff17.rb@gmail.com",
+  password:             "rjap xice dcmj qrrk",
+  authentication:       'plain',
+  #enable_starttls_auto: true
+ }
+  config.action_mailer.default_url_options = { :host => "localhost:3000" }
 end

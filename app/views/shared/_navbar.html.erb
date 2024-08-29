@@ -12,11 +12,27 @@
         <a class="nav-link" href="<%= weather_path %>">Weather</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="<%= pokemon_path %>#">Pokemons</a>
+        <a class="nav-link" href="<%= pokemon_path %>">Pokemons</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="<%= history_path %>#">History</a>
+        <a class="nav-link" href="<%= history_path %>">History</a>
       </li>
+
+      <!-- User Authentication Links -->
+      <% if user_signed_in? %>
+        <li class="nav-item">
+          <%= link_to "Profile", edit_user_registration_path, class: "nav-link" %>
+        </li>
+        <li class="nav-item">
+          <%= button_to "Log out", destroy_user_session_path, method: :delete, class: "btn btn-link nav-link" %>
+        </li>
+      <% else %>
+        <li class="nav-item d-flex">
+          <%= link_to "Login", new_user_session_path, class: "nav-link" %>
+          <%= link_to "Sign up", new_user_registration_path, class: "nav-link" %>
+        </li>
+      <% end %>
+
     </ul>
   </div>
 </nav>
