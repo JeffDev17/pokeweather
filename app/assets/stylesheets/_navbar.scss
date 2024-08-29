@@ -37,3 +37,13 @@
     background-color: #343a40; // Dark background for collapsed menu
   }
   
+  .nav-item-email-container {
+    padding-left: 40px; /* Adjust padding as needed */
+    padding-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+  }
+  .nav-item-email {
+    color: white;
+  }
