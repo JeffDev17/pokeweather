@@ -6,10 +6,7 @@ class WeatherController < ApplicationController
   def search
     city = params[:city].capitalize
     weather_data = Search.new.run(city)
-<<<<<<< HEAD
     
-=======
->>>>>>> develop
     display_results(weather_data)
   end
 
