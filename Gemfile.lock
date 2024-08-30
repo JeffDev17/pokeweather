@@ -331,7 +331,7 @@ DEPENDENCIES
   selenium-webdriver
   sprockets-rails (~> 3.0, >= 3.0.4)
   stimulus-rails
-  turbo-rails
+  turbo-rails (~> 1.4)
   tzinfo-data
   web-console (~> 4.2)
 
