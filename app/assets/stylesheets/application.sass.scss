@@ -1,0 +1,11 @@
+// Entry point for your Sass build
+// app/assets/stylesheets/application.scss
+
+
+
+// Import other stylesheets here if needed
+@import "weather";
+@import '_navbar';
+@import '_results';
+@import 'table';
+@import 'devise';

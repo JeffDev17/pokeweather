@@ -1,0 +1,75 @@
+# API key: bb60fe79dd6d01cf93722e71082e8701
+
+# 1st Fazer APIs funcionar
+
+# 2nd criar metodos para filtrar pokemons por temperatura;
+
+# 3rd Criar pagina HTML;
+
+# BONUS - Criar histórico de busca;
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+UPDATES:
+
+- API do weather nao está ativa ainda. Descobri por buscas que demora cerca de 2h p/ ativar.
+> Focar na API do pokemons
+
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+!!!!!!!!!!!!!!! COMANDOS UTEIS !!!!!!!!!!!!!!!!!!!
+
+KILL SERVER: 
+!!!!!  kill -9 $(lsof -i tcp:3000 -t)
+
+Rails g (controller/model etc)
+
+#MODELO SCRIPT CALL API WEATHER
+
+require 'rest-client'
+require 'json'
+# Replace 'YOUR_API_KEY' with your actual API key
+api_key = 'YOUR_API_KEY'
+city = 'New York'  # Replace with the desired city
+# Make an API request to retrieve weather data
+response = RestClient.get("https://api.openweathermap.org/data/2.5/weather?q=#{city}&appid=#{api_key}")
+weather_data = JSON.parse(response)
+# Extract relevant information
+temperature = weather_data['main']['temp']
+description = weather_data['weather'][0]['description']
+puts "Current weather in #{city}:"
+puts "Temperature: #{temperature} Kelvin"
+puts "Description: #{description}"
+
+
+
+str = '["sizzlipede"]'
+
+cleaned_str = str.gsub(/[\[\]"']/, '')
+
+puts cleaned_str  # Output will be sizzlipede
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+FEATURES:
+
+* Search com API de clima que seleciona pokemon da lista do PokemonAPI
+* Search registra histórico de busca;
+* Search garante pokemons não repetidos dentro da mesma data;
+* Tabela para registro de caracteristicas dos pokemons buscados;
+
+####################
+
+Devise
+
+Bundle add Devise
+Rails g devise:install
+
+rails g devise User (sem mais infos para usar o padrao) (criar modelo)
+
+db:migrate
+
+
+

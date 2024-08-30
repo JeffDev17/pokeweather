@@ -1,0 +1,109 @@
+/* app/assets/stylesheets/devise.scss */
+
+.devise-form {
+    max-width: 500px;
+    margin: auto;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 5px;
+  }
+  
+  .devise-form .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .devise-form .btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+  }
+
+  .form-links {
+    margin-top: 20px;
+  }
+  
+  .form-links .btn-link {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .form-links .btn-link:hover {
+    text-decoration: underline;
+  }
+  
+  .form-links .btn-outline-primary {
+    margin-top: 10px;
+    padding: 5px 10px;
+    border-radius: 5px;
+  }
+
+  /* app/assets/stylesheets/devise.scss */
+
+.form-edit-user {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .form-edit-user .form-label {
+    font-weight: bold;
+  }
+  
+  .form-edit-user .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .form-edit-user .alert-warning {
+    margin-top: 10px;
+    font-size: 14px;
+  }
+  
+  .form-edit-user .btn-primary {
+    width: 100%;
+    padding: 10px;
+  }
+  
+  .form-edit-user .btn-danger {
+    margin-top: 10px;
+    width: 100%;
+  }
+  
+  .form-edit-user .btn-link {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .form-edit-user .btn-link:hover {
+    text-decoration: underline;
+  }
+
+  /* app/assets/stylesheets/devise.scss */
+
+.form-forgot-password {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .form-forgot-password .form-label {
+    font-weight: bold;
+  }
+  
+  .form-forgot-password .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .form-forgot-password .btn-primary {
+    width: 100%;
+    padding: 10px;
+  }
+  
+  .form-forgot-password .btn-link {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .form-forgot-password .btn-link:hover {
+    text-decoration: underline;
+  }
