@@ -3,12 +3,12 @@ class WeatherController < ApplicationController
     @random_search = SearchHistory.all.sample
   end
 
-  def search
-    city = params[:city].capitalize
-    weather_data = Search.new.run(city)
-    
-    display_results(weather_data)
-  end
+    def search
+      city = params[:city].capitalize
+      weather_data = Search.new.run(city)
+      
+      display_results(weather_data)
+    end
 
   private
 
