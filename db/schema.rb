@@ -14,6 +14,7 @@ ActiveRecord::Schema[7.0].define(version: 2024_08_28_153821) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+<<<<<<< HEAD
   create_table "admin_users", force: :cascade do |t|
     t.string "email", null: false
     t.string "password_digest", null: false
@@ -22,6 +23,8 @@ ActiveRecord::Schema[7.0].define(version: 2024_08_28_153821) do
     t.index ["email"], name: "index_admin_users_on_email", unique: true
   end
 
+=======
+>>>>>>> develop
   create_table "pokemon_types", force: :cascade do |t|
     t.bigint "pokemon_id", null: false
     t.bigint "type_id", null: false

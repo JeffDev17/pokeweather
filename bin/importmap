@@ -1,4 +1,8 @@
 #!/usr/bin/env ruby
 
 require_relative "../config/application"
+<<<<<<< HEAD
 require "importmap/commands"
+=======
+require "importmap/commands"
+>>>>>>> develop

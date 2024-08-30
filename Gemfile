@@ -5,7 +5,11 @@ ruby "3.2.1"
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.0.8"
+<<<<<<< HEAD
 
+=======
+gem 'rails_admin', '~> 3.0', github: "railsadminteam/rails_admin", branch: "master"
+>>>>>>> develop
 gem 'sassc-rails'
 
 
@@ -34,7 +38,10 @@ gem 'rest-client'
 
 gem "cssbundling-rails"
 
+<<<<<<< HEAD
 gem 'rails_admin'
+=======
+>>>>>>> develop
 
 
 #gem 'json'

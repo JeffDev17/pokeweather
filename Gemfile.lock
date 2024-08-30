@@ -1,3 +1,19 @@
+<<<<<<< HEAD
+=======
+GIT
+  remote: https://github.com/railsadminteam/rails_admin.git
+  revision: 7455d26ddcc49971b099b03de42012c413e47f9c
+  branch: master
+  specs:
+    rails_admin (3.2.0.rc)
+      activemodel-serializers-xml (>= 1.0)
+      csv
+      kaminari (>= 0.14, < 2.0)
+      nested_form (~> 0.3)
+      rails (>= 6.0, < 8)
+      turbo-rails (>= 1.0, < 3)
+
+>>>>>>> develop
 GEM
   remote: https://rubygems.org/
   specs:
@@ -87,7 +103,11 @@ GEM
       rack-test (>= 0.6.3)
       regexp_parser (>= 1.5, < 3.0)
       xpath (~> 3.2)
+<<<<<<< HEAD
     concurrent-ruby (1.3.3)
+=======
+    concurrent-ruby (1.3.4)
+>>>>>>> develop
     crass (1.0.6)
     cssbundling-rails (1.4.0)
       railties (>= 6.0.0)
@@ -151,7 +171,11 @@ GEM
       mime-types-data (~> 3.2015)
     mime-types-data (3.2024.0702)
     mini_mime (1.1.5)
+<<<<<<< HEAD
     minitest (5.24.1)
+=======
+    minitest (5.25.1)
+>>>>>>> develop
     msgpack (1.7.2)
     nested_form (0.3.2)
     net-imap (0.4.15)
@@ -165,7 +189,11 @@ GEM
       net-protocol
     netrc (0.11.0)
     nio4r (2.7.3)
+<<<<<<< HEAD
     nokogiri (1.16.6-arm64-darwin)
+=======
+    nokogiri (1.16.7-arm64-darwin)
+>>>>>>> develop
       racc (~> 1.4)
     orm_adapter (0.5.0)
     pg (1.5.6)
@@ -174,7 +202,11 @@ GEM
     public_suffix (6.0.0)
     puma (5.6.8)
       nio4r (~> 2.0)
+<<<<<<< HEAD
     racc (1.8.0)
+=======
+    racc (1.8.1)
+>>>>>>> develop
     rack (2.2.9)
     rack-test (2.1.0)
       rack (>= 1.3)
@@ -199,6 +231,7 @@ GEM
     rails-html-sanitizer (1.6.0)
       loofah (~> 2.21)
       nokogiri (~> 1.14)
+<<<<<<< HEAD
     rails_admin (3.2.0.beta)
       activemodel-serializers-xml (>= 1.0)
       csv
@@ -206,6 +239,8 @@ GEM
       nested_form (~> 0.3)
       rails (>= 6.0, < 8)
       turbo-rails (>= 1.0, < 3)
+=======
+>>>>>>> develop
     railties (7.0.8.4)
       actionpack (= 7.0.8.4)
       activesupport (= 7.0.8.4)
@@ -256,7 +291,11 @@ GEM
       railties (>= 6.0.0)
     stringio (3.1.1)
     strscan (3.1.0)
+<<<<<<< HEAD
     thor (1.3.1)
+=======
+    thor (1.3.2)
+>>>>>>> develop
     tilt (2.4.0)
     timeout (0.4.1)
     turbo-rails (2.0.6)
@@ -278,7 +317,11 @@ GEM
     websocket-extensions (0.1.5)
     xpath (3.2.0)
       nokogiri (~> 1.8)
+<<<<<<< HEAD
     zeitwerk (2.6.16)
+=======
+    zeitwerk (2.6.17)
+>>>>>>> develop
 
 PLATFORMS
   arm64-darwin-22
@@ -294,7 +337,11 @@ DEPENDENCIES
   pg (~> 1.1)
   puma (~> 5.0)
   rails (~> 7.0.8)
+<<<<<<< HEAD
   rails_admin
+=======
+  rails_admin (~> 3.0)!
+>>>>>>> develop
   redis (~> 4.0)
   rest-client
   sassc-rails

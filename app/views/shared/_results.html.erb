@@ -1,4 +1,5 @@
 <%= turbo_frame_tag "results" do %>
+<<<<<<< HEAD
 <div class="results">
   <strong>Search Results:</strong><br>
   City: <%= weather_data[:city] %><br>
@@ -7,5 +8,15 @@
   Rain: <%= weather_data[:rain] == "Rain" ? "Yes" : "No" %> <br>
   Weather Condition: <%= weather_data[:rain] %>
 </div>
+=======
+  <div class="results">
+    <strong>Search Results:</strong><br>
+    City: <%= weather_data[:city] %><br>
+    Pokémon: <%= weather_data[:pokemon] %><br>
+    Temperature: <%= weather_data[:temperature] %>°C<br>
+    Rain: <%= weather_data[:rain] == "Rain" ? "Yes" : "No" %> <br>
+    Weather Condition: <%= weather_data[:rain] %>
+  </div>
+>>>>>>> develop
 <% end %>
 
