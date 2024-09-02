@@ -18,8 +18,11 @@
         <a class="nav-link" href="<%= history_path %>">History</a>
       </li>
 
-      <!-- User Authentication Links -->
+    <!-- User Authentication Links -->
       <% if user_signed_in? %>
+        <li class="nav-item">
+          <%= link_to "My Pokémon Collection", user_collection_index_path(current_user), class: "nav-link" %>
+        </li>
         <li class="nav-item">
           <%= link_to "Edit Profile", edit_user_registration_path, class: "nav-link" %>
         </li>

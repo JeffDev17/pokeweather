@@ -1,0 +1,18 @@
+<h1 class="page-title"><%= @user.email %>'s Pokémon Collection</h1>
+
+<div class="table-container">
+  <table class="table table-styling">
+    <thead>
+      <tr>
+        <th>Pokémon Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @pokemons.each do |user_pokemon| %>
+        <tr>
+          <td><%= user_pokemon.pokemon.name %></td> 
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
