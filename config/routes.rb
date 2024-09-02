@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'user_pokemons/index'
   devise_for :users
   get 'history/index'
   get 'pokemons/index'
@@ -10,7 +11,9 @@ Rails.application.routes.draw do
 
   get 'pokemon', to: 'pokemons#index'
   get 'history', to: 'history#index'
-
+  resources :users, only: [] do
+    resources :user_pokemons, only: [:index], as: 'collection'
+  end
   #get 'weather/index'
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html

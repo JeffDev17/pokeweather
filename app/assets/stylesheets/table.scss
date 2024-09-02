@@ -1,63 +1,37 @@
-.pokedex-title {
-    font-size: 2rem; /* Adjust the size as needed */
-    margin-bottom: 1rem; /* Space between the title and the table */
-    text-align: center; /* Center the title */
-    color: #333; /* Adjust color if needed */
-  }
-  
-  .table-container {
-    display: flex;
-    justify-content: center; /* Center the table horizontally */
-    margin: 0 auto; /* Center the container on the page */
-    max-width: 100%; /* Ensure it doesn't exceed the viewport width */
-  }
-  
-  .table {
-    width: 100%; /* Adjust width if needed */
-    max-width: 800px; /* Set a max-width for the table */
-  }
-  
-  /////////////
+/* Center-align the table container and add rounded edges */
+.table-container {
+  display: flex;
+  justify-content: center;
+  padding: 1rem; /* Optional: Add padding around the table */
+}
 
-/* table.scss */
+.table {
+  border-radius: 10px; /* Rounded edges for the table */
+  overflow: hidden; /* Ensures corners are rounded properly */
+  width: 100%; /* Make table responsive */
+  max-width: 1200px; /* Optional: Set a max width */
+  margin: auto; /* Center the table horizontally */
+  border-collapse: separate; /* Ensures borders are rounded */
+  border-spacing: 0; /* Remove spacing between cells */
+}
 
-/* app/assets/stylesheets/table.scss */
+/* Style for table headers */
+.table th {
+  text-align: center; /* Center-align the text in headers */
+  background-color: #f8f9fa; /* Optional: Add a background color */
+  padding: 0.75rem; /* Padding inside header cells */
+}
 
-/* Style for the title */
-.history-title {
-    text-align: center;
-    margin-bottom: 1rem;
-  }
-  
-  /* Container to center the table */
-  .table-container {
-    display: flex;
-    justify-content: center;
-    padding: 0 1rem; /* Adjust as needed */
-  }
-  
-  /* Style for the table */
-  .table {
-    width: 100%;
-    max-width: 800px; /* Adjust as needed */
-    margin: 0 auto;
-    border-collapse: collapse;
-  }
-  
-  .table thead th {
-    text-align: center;
-  }
-  
-  .table tbody td {
-    text-align: center;
-  }
-  
-  .table-striped tbody tr:nth-of-type(odd) {
-    background-color: #f9f9f9;
-  }
-  
-  .table-striped tbody tr:nth-of-type(even) {
-    background-color: #fff;
-  }
-  
-  
+/* Style for table cells */
+.table td {
+  padding: 0.75rem; /* Padding inside data cells */
+}
+
+/* Global title styling */
+.page-title {
+  text-align: center;
+  margin: 0 auto; /* Optional: Center the title within its container */
+  padding: 1rem; /* Optional: Add some padding around the title */
+  font-size: 1.5rem; /* Adjust font size as needed */
+  font-weight: bold; /* Make the font bold if needed */
+}

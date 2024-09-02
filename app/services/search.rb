@@ -5,16 +5,12 @@ class Search
         temperature = data[0]
         rain = data[1]
         city = data[2]
-        
         type = check_type(temperature, rain).downcase
   
         pokemon_selecionado = consult_pokemon(type)
         pokemon_selecionado.capitalize
 
-        #Coloca o puts no console
-        mostra_resultado(city, temperature, rain, pokemon_selecionado, type)
-
-        #regitra no SearchHistory
+        #regitra na tabela SearchHistory 
         register(city, temperature, pokemon_selecionado.capitalize)
         
         #Monta o objeto pokemon (nome, altura, peso, dexNo, tipo)
@@ -38,21 +34,6 @@ class Search
     end
 
     private  
-
-    def mostra_resultado(city, temperature, rain, pokemon_selecionado, type)
-      
-      puts "A temperatura atual na cidade de #{city} é #{temperature}°C"
-      
-      if rain.eql?('Rain')
-        puts "Atualmente está chovendo;"
-      else
-        puts "Não está chovendo."
-      end
-
-      puts "O pokemon selecionado para esta região foi: #{pokemon_selecionado} e o tipo é: #{type.capitalize}"
-
-    end
-
 
     def check_type(temperature, rain)
         return 'Electric' if rain.eql?('Rain')
@@ -118,15 +99,9 @@ class Search
     def create_pokemon_type(pokemon, types)
       types.each do |type|
       type_seed = Type.find_by(name: type['type']['name'].capitalize)
-
       PokemonType.create!(pokemon: pokemon, type: type_seed)
-
-
       end
-
-
     end
-
 
 end
 
