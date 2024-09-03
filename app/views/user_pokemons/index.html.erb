@@ -1,16 +1,18 @@
-<h1 class="page-title"><%= @user.email %>'s Pokémon Collection</h1>
+<h1 class="page-title"><%= current_user.email %>'s Pokémon Collection</h1>
 
 <div class="table-container">
   <table class="table table-styling">
     <thead>
       <tr>
         <th>Pokémon Name</th>
+        <th>Times Seen</th>
       </tr>
     </thead>
     <tbody>
-      <% current_user.pokemons.each do |pokemon| %>
+      <% current_user.user_pokemons.each do |user_pokemon| %>
         <tr>
-          <td><%= pokemon.name %></td> 
+          <td><%= user_pokemon.pokemon.name %></td>
+          <td><%= user_pokemon.seen %></td>
         </tr>
       <% end %>
     </tbody>
