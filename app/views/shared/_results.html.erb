@@ -1,10 +1,16 @@
 <%= turbo_frame_tag "results" do %>
-  <div class="results">
+  <div class="results bg-light p-3 rounded shadow-sm mt-3">
     <strong>Search Results:</strong><br>
     City: <%= weather_data[:city] %><br>
     Pokémon: <%= weather_data[:pokemon] %><br>
     Temperature: <%= weather_data[:temperature] %>°C<br>
     Rain: <%= weather_data[:rain] == "Rain" ? "Yes" : "No" %> <br>
-    Weather Condition: <%= weather_data[:rain] %>
+    Weather Condition: <%= weather_data[:rain] %><br>
+
+    <% if random_pokemon && random_pokemon.sprite_image.attached? %>
+        <div class="text-center mt-3">
+         <%= image_tag random_pokemon.sprite_image, class: "pokemon-image", alt: random_pokemon.name %>
+       </div>
+    <% end %>
   </div>
 <% end %>

@@ -15,10 +15,19 @@
         <% if @random_search %>
           <div class="random-search mt-3 bg-light p-3 rounded">
             <h3>Previous searches:</h3>
-            <p>City: <%= @random_search.city %></p>
-            <p>Pokemon: <%= @random_search.pokemon %></p>
-            <p>Temperature: <%= @random_search.temperature %>°C</p>
-            <p>Date: <%= @random_search.created_at.strftime("%B %d, %Y %H:%M") %></p>
+            <div class="row">
+              <div class="col-md-8">
+                <p>City: <%= @random_search.city %></p>
+                <p>Pokemon: <%= @random_search.pokemon %></p>
+                <p>Temperature: <%= @random_search.temperature %>°C</p>
+                <p>Date: <%= @random_search.created_at.strftime("%B %d, %Y %H:%M") %></p>
+              </div>
+              <% if @random_pokemon %>
+                <div class="col-md-4 text-center">
+                  <%= image_tag @random_pokemon.sprite_image, class: "pokemon-image", alt: @random_pokemon.name %>
+                </div>
+              <% end %>
+            </div>
           </div>
         <% end %>
       </div>
@@ -29,5 +38,3 @@
 <turbo-frame id="results">
   <!-- This will be replaced by Turbo Stream -->
 </turbo-frame>
-
-

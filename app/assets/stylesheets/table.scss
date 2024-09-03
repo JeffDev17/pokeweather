@@ -36,3 +36,10 @@
   font-size: 1.5rem; /* Adjust font size as needed */
   font-weight: bold; /* Make the font bold if needed */
 }
+
+.pokemon-image {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  margin-left: auto; /* Ensure the image aligns to the right of the column */
+}
