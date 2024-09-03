@@ -8,9 +8,9 @@
       </tr>
     </thead>
     <tbody>
-      <% @pokemons.each do |user_pokemon| %>
+      <% current_user.pokemons.each do |pokemon| %>
         <tr>
-          <td><%= user_pokemon.pokemon.name %></td> 
+          <td><%= pokemon.name %></td> 
         </tr>
       <% end %>
     </tbody>
