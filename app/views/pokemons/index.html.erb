@@ -8,6 +8,7 @@
         <th><%= link_to "Name", pokemons_path(sort: "name", direction: sort_direction("name")) %></th>
         <th><%= link_to "Height", pokemons_path(sort: "height", direction: sort_direction("height")) %></th>
         <th><%= link_to "Weight", pokemons_path(sort: "weight", direction: sort_direction("weight")) %></th>
+        <th>Image</th> <!-- New column header for image -->
       </tr>
     </thead>
     <tbody>
@@ -17,6 +18,13 @@
           <td><%= pokemon.name %></td>
           <td><%= pokemon.height %></td>
           <td><%= pokemon.weight %></td>
+          <td>
+            <% if pokemon.sprite_image.attached? %>
+              <%= image_tag rails_blob_path(pokemon.sprite_image, only_path: true), alt: pokemon.name, class: "pokemon-image" %>
+            <% else %>
+              No image
+            <% end %>
+          </td> <!-- New column for image -->
         </tr>
       <% end %>
     </tbody>

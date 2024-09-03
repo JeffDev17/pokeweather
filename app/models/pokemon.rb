@@ -7,4 +7,7 @@ class Pokemon < ApplicationRecord
   has_many :user_pokemons
   has_many :users, through: :user_pokemons
 
+  #conexao Sprites usando ActiveStorage
+  has_one_attached :sprite_image
+
 end

@@ -1,6 +1,3 @@
-#require 'rest-client'
-#require 'json'
-
 class PokemonApi
 
     def run(type)
@@ -19,15 +16,14 @@ class PokemonApi
               random_pokemon = names_list.sample
             end
             
-            random_pokemon.to_s
+            return random_pokemon.to_s
 
     end
 
     def register(pokemon)
+      pokemon = pokemon.downcase
       response = RestClient.get("https://pokeapi.co/api/v2/pokemon/#{pokemon}/")
         pokemon_data = JSON.parse(response)
-      
-      pokemon_data
-
+        return pokemon_data
     end
 end
