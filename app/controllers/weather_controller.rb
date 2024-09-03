@@ -20,13 +20,14 @@ class WeatherController < ApplicationController
       locals: { weather_data: weather_data })
   end
   
-  def register_user_dex(weather_data)  
+  def register_user_dex(weather_data)
     pokemon_name = weather_data[:pokemon]
-
     @pokemon = Pokemon.find_or_create_by(name: pokemon_name)
-     current_user.user_pokemons.find_or_create_by(pokemon: @pokemon)
-
-     #register.update
-     
+  
+    user_pokemon = current_user.user_pokemons.find_or_create_by(pokemon: @pokemon)
+  
+    new_seen_count = (user_pokemon.seen || 0) + 1
+    user_pokemon.update(seen: new_seen_count)
   end
 end
+
