@@ -22,8 +22,11 @@ class WeatherController < ApplicationController
   
   def register_user_dex(weather_data)  
     pokemon_name = weather_data[:pokemon]
+
     @pokemon = Pokemon.find_or_create_by(name: pokemon_name)
-    
-    current_user.user_pokemons.find_or_create_by(pokemon: @pokemon)
+     current_user.user_pokemons.find_or_create_by(pokemon: @pokemon)
+
+     #register.update
+     
   end
 end
