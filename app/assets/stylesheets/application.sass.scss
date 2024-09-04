@@ -1,11 +1,25 @@
 // Entry point for your Sass build
 // app/assets/stylesheets/application.scss
-
-
-
+/* Sticky footer adjustments */
+html {
+    height: 100%;
+    width: 100%;
+  }
+  
+  body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  .footer {
+    margin-top: auto;
+  }
 // Import other stylesheets here if needed
 @import "weather";
 @import '_navbar';
 @import '_results';
 @import 'table';
 @import 'devise';
+@import '_footer';
+

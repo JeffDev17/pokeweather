@@ -1,15 +1,62 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap demo</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-  </head>
-  <body>
-    <h1>Hello, world!</h1>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-  </body>
-  
-  
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pokémon Weather Adventure</title>
+  <link rel="stylesheet" href="styles.css"> <!-- Link to your main stylesheet -->
+  <style>
+    .box {
+      background-color: #ffffff;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      margin: 20px auto;
+      max-width: 800px;
+      text-align: center;
+    }
+    /* Specific style for lists inside the .box class */
+    .box ul {
+      text-align: left;
+      padding-left: 20px;
+      margin-left: auto;
+      margin-right: auto;
+      max-width: fit-content;
+    }
 
+    .box ul li {
+      margin-bottom: 10px; /* Add space between list items */
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="box">
+      <h1 class="form-title">Welcome to Pokémon Weather App</h1>
+      <p>Discover Pokémon based on the current weather conditions. Explore your personal Pokémon collection and track your search history.<br></p>
+      <p>This app is designed to offer a unique Pokémon experience based on current weather conditions and your personal preferences.</p>
+      <p><strong>Technologies & Skills Used:</strong></p>
+      <ul>
+        <li><strong>Ruby on Rails:</strong> The core framework driving the application, ensuring a solid and scalable web experience.</li>
+        <li><strong>OpenWeather API:</strong> Integrated to provide accurate weather data, allowing us to tailor Pokémon recommendations based on the weather.</li>
+        <li><strong>Pokémon API:</strong> Fetches Pokémon data to provide a daily, weather-based Pokémon suggestion.</li>
+        <li><strong>Devise:</strong> Powers secure user authentication and email recovery, making user management smooth and reliable.</li>
+        <li><strong>ActiveRecord:</strong> Manages interactions with the database, including user Pokémon collections and search history.</li>
+        <li><strong>RMagick:</strong> Handles Pokémon sprite images, ensuring that each Pokémon has a detailed and attractive image.</li>
+        <li><strong>Turbo Rails:</strong> Enhances the user experience with real-time updates and minimal page refreshes.</li>
+        <li><strong>SCSS:</strong> Used to style the app for a clean, modern look.</li>
+      </ul>
+      <p><strong>Features:</strong></p>
+      <ul>
+        <li><strong>Dynamic Pokémon Recommendations:</strong> Discover Pokémon that match your local weather conditions, updated daily.</li>
+        <li><strong>Personal Pokémon Collection:</strong> Manage and view your collection of Pokémon, complete with images and details.</li>
+        <li><strong>Search History Tracking:</strong> View and sort your search history by number, height, and date/time.</li>
+        <li><strong>Global Pokémon Tracking:</strong> Explore a comprehensive list of Pokémon and sort them based on various attributes.</li>
+      </ul>
+    </div>
+  </header>
+  
+  </main>
+</body>
+</html>
