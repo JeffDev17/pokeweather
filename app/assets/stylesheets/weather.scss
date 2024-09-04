@@ -1,21 +1,23 @@
 body {
-  background-color: #c0c5ba;
+  background-color: #ecf0f1;
   margin: 0;
   font-family: Arial, sans-serif;
 }
-/* app/assets/stylesheets/search.scss */
 
+/* Container for the entire search form and results section */
 .search-container {
   max-width: 800px; /* Adjust the width as needed */
   margin: 0 auto; /* Center the container */
   padding: 20px;
 }
 
+/* Style for the title in the search form */
 .form-title {
   color: #2c3e50;
   font-weight: bold;
 }
 
+/* Input styling for the search bar */
 .search-input {
   border-radius: 30px 0 0 30px;
   padding: 10px 20px;
@@ -24,6 +26,7 @@ body {
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+/* Button styling for the search button */
 .btn-search {
   border-radius: 0 30px 30px 0;
   padding: 10px 20px;
@@ -39,18 +42,40 @@ body {
   background-color: #0056b3;
 }
 
+/* Styling for the previous search container */
 .random-search {
   background-color: #f0f0f0;
   padding: 15px;
   border-radius: 8px;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  margin-top: 20px; /* Space between previous searches and search results */
 }
 
+/* Header in the previous searches section */
 .random-search h3 {
   margin-bottom: 10px;
   font-weight: bold;
 }
 
+/* Paragraph styling in the previous searches section */
 .random-search p {
   margin-bottom: 5px;
+}
+
+/* Turbo Frame container for search results */
+#results {
+  margin-top: 20px; /* Space between search bar and results */
+}
+
+/* Center the Turbo Frame content */
+.search-container, 
+#results {
+  text-align: center;
+}
+
+/* Ensure the container width and alignment are consistent */
+.search-container, 
+.random-search {
+  max-width: 800px;
+  margin: 0 auto;
 }
