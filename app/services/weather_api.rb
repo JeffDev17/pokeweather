@@ -1,7 +1,7 @@
 class WeatherApi
 
     def run(city)   
-        api_key = 'bb60fe79dd6d01cf93722e71082e8701'
+        api_key = 'insert key here'
         
         response = RestClient.get("https://api.openweathermap.org/data/2.5/weather?q=#{city}&lang=pt_br&units=metric&appid=#{api_key}")
         
